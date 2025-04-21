@@ -123,7 +123,9 @@ const data = [
 ```
 
 ## Props
+
 部分属性可参考 scale 图表度量，度量详细介绍可见：[度量](../../tutorial/scale.zh.md)
+
 ### visible: boolean
 
 是否显示，默认为 `true`
@@ -134,27 +136,34 @@ const data = [
 
 ### type: string
 
-指定不同的度量类型，支持的 type 为 `identity`、`linear`、`cat`、`timeCat`。 
+指定不同的度量类型，支持的 type 为 `identity`、`linear`、`cat`、`timeCat`。
 
 ### position: string
 
 坐标轴显示的位置：`'top' | 'right' | 'bottom' | 'left'`
 
 ### tickCount: Number
+
 坐标轴上刻度点的个数，不同的度量类型对应不同的默认值
 
 ### range: string
+
 输出数据的范围，数值类型的默认值为 [0, 1]，格式为 [min, max]，min 和 max 均为 0 至 1
 
 ### formatter: Function
+
 回调函数，用于格式化坐标轴刻度点的文本显示，会影响数据在坐标轴 axis、图例 legend、提示信息 tooltip 上的显示。
+
 ### min: string
+
 定义数值范围的最小值。
 
 ### max: string
+
 定义数值范围的最大值。
 
 ### nice: boolean
+
 默认为 true，用于优化数值范围，使绘制的坐标轴刻度线均匀分布。例如原始数据的范围为 [3, 97]，如果 nice 为 true，那么就会将数值范围调整为 [0, 100]。
 
 ### grid: string
@@ -167,7 +176,7 @@ const data = [
 
 #### style.label: TextAttr | Function
 
-> 类型为绘图属性：[文本属性](/zh/docs/tutorial/shape-attrs#文本属性) 文本样式文本样式
+> 类型为绘图属性：[文本属性](/tutorial/shape-attrs#文本属性) 文本样式文本样式
 
 #### style.tickLine
 
@@ -182,13 +191,13 @@ const data = [
 
 #### style.line
 
-> 类型为绘图属性：[线条属性](/zh/docs/tutorial/shape-attrs#线条属性) 线条样式
+> 类型为绘图属性：[线条属性](/tutorial/shape-attrs#线条属性) 线条样式
 
 轴线样式
 
 #### style.grid
 
-> 类型为绘图属性：[线条属性](/zh/docs/tutorial/shape-attrs#线条属性) 线条样式
+> 类型为绘图属性：[线条属性](/tutorial/shape-attrs#线条属性) 线条样式
 
 网格线样式
 
@@ -548,7 +557,7 @@ title: 标注 - Guide
 order: 9
 ---
 
-提示和标注， 主要用于在图表上标识额外的标记注解。目前内置PointGuide点标注、TextGuide文本标注、TagGuide标注、ImageGuide图片标注和LineGuide线标注，也可以自定义标注。
+提示和标注， 主要用于在图表上标识额外的标记注解。目前内置 PointGuide 点标注、TextGuide 文本标注、TagGuide 标注、ImageGuide 图片标注和 LineGuide 线标注，也可以自定义标注。
 
 ## Usage
 
@@ -666,7 +675,7 @@ y 轴偏移量
 
 ### background: Attrs
 
-> 类型为绘图属性：[图形属性](/zh/docs/tutorial/shape-attrs#通用属性) 
+> 类型为绘图属性：[图形属性](/tutorial/shape-attrs#通用属性)
 
 ### triggerRef: any
 
@@ -674,7 +683,7 @@ tagGuide 实例
 
 ### textStyle: TextAttr
 
-> 类型为绘图属性：[文本属性](/zh/docs/tutorial/shape-attrs#文本属性) 文本样式文本样式
+> 类型为绘图属性：[文本属性](/tutorial/shape-attrs#文本属性) 文本样式文本样式
 
 ## ImageGuide
 
@@ -686,7 +695,7 @@ tagGuide 实例
 
 ### attrs
 
-图片属性 更多详见：[绘图属性 - ShapeAttrs](/zh/docs/tutorial/shape-attrs)
+图片属性 更多详见：[绘图属性 - ShapeAttrs](/tutorial/shape-attrs)
 
 ### offsetX: number
 
@@ -710,11 +719,11 @@ y 轴偏移量
 
 ## demo 示例
 
-- [文本标注](/zh/examples/component/guide#text)
-- [点标注](/zh/examples/component/guide#point)
-- [图片标注](/zh/examples/component/guide#image)
-- [辅助线](/zh/examples/component/guide#line)
-- [自定义标注内容](/zh/examples/component/guide#custom)
+- [文本标注](/site/examples/component/guide/demo/text.jsx)
+- [点标注](/site/examples/component/guide/demo/point.jsx)
+- [图片标注](/site/examples/component/guide/demo/image.jsx)
+- [辅助线](/site/examples/component/guide/demo/line.jsx)
+- [自定义标注内容](/site/examples/component/guide/demo/custom.jsx)
 
 # api/chart/interval
 
@@ -820,8 +829,8 @@ const data = [
 
 #### demo 示例
 
-- [柱状图选中](/zh/examples/column/column#selection)
-- [饼图选中](/zh/examples/pie/pie#selection)
+- [柱状图选中](/site/examples/column/column/demo/selection.jsx)
+- [饼图选中](/site/examples/pie/pie/demo/selection.jsx)
 
 ### sizeRatio
 
@@ -920,7 +929,7 @@ const data = [
 
 ### nameStyle
 
-> 类型为绘图属性：[文本属性](/zh/docs/tutorial/shape-attrs#文本属性)
+> 类型为绘图属性：[文本属性](/tutorial/shape-attrs#文本属性)
 
 图例名称样式
 
@@ -935,7 +944,7 @@ const data = [
 
 ### valueStyle
 
-> 类型为绘图属性：[文本属性](/zh/docs/tutorial/shape-attrs#文本属性)
+> 类型为绘图属性：[文本属性](/tutorial/shape-attrs#文本属性)
 
 图例值样式
 
@@ -970,9 +979,9 @@ item 点击的回调
 
 获取图表中原始分类数据
 
-### getMaxItemBox(legendShape) 
-获取 legendShape 包围盒
+### getMaxItemBox(legendShape)
 
+获取 legendShape 包围盒
 
 # api/chart/line
 
@@ -1123,19 +1132,19 @@ marignTop: '10px'
 
 滚动条背景样式
 
-> 类型为绘图属性：[线条属性](/zh/docs/tutorial/shape-attrs#线条属性) 线条样式
+> 类型为绘图属性：[线条属性](/tutorial/shape-attrs#线条属性) 线条样式
 
 ### barStyle: ShapeProps
 
 滑块样式
 
-> 类型为绘图属性：[线条属性](/zh/docs/tutorial/shape-attrs#线条属性) 线条样式
+> 类型为绘图属性：[线条属性](/tutorial/shape-attrs#线条属性) 线条样式
 
 ## demo 示例
 
-- [折线图平移](/zh/examples/line/line#pan)
-- [柱状图平移](/zh/examples/column/column#pan)
-- [散点图缩放平移](/zh/examples)
+- [折线图平移](/site/examples/line/line/demo/pan.jsx)
+- [柱状图平移](/site/examples/column/column/demo/pan.jsx)
+- [散点图缩放平移](/site/examples/point/scatter//demo/roam.jsx)
 
 # api/chart/tooltip
 
@@ -1197,25 +1206,25 @@ const data = [
 
 ### crosshairsStyle: LineAttrs
 
-> 类型为绘图属性：[线条属性](/zh/docs/tutorial/shape-attrs#线条属性)
+> 类型为绘图属性：[线条属性](/tutorial/shape-attrs#线条属性)
 
 十字线样式
 
 ### nameStyle: TextAttrs
 
-> 类型为绘图属性：[文本属性](/zh/docs/tutorial/shape-attrs#文本属性)
+> 类型为绘图属性：[文本属性](/tutorial/shape-attrs#文本属性)
 
 主体名称样式
 
 ### valueStyle: TextAttrs
 
-> 类型为绘图属性：[文本属性](/zh/docs/tutorial/shape-attrs#文本属性)
+> 类型为绘图属性：[文本属性](/tutorial/shape-attrs#文本属性)
 
 主体值样式
 
 ### background: RectAttrs
 
-> 类型为绘图属性：[通用属性](/zh/docs/tutorial/shape-attrs#通用属性)
+> 类型为绘图属性：[通用属性](/tutorial/shape-attrs#通用属性)
 
 主体背景样式
 
@@ -1225,13 +1234,13 @@ xTip 中显示的 text 定义
 
 ### xTipTextStyle：TextAttrs
 
-> 类型为绘图属性：[文本属性](/zh/docs/tutorial/shape-attrs#文本属性)
+> 类型为绘图属性：[文本属性](/tutorial/shape-attrs#文本属性)
 
 xTip 中字体样式
 
 ### xTipBackground：RectAttrs
 
-> 类型为绘图属性：[通用属性](/zh/docs/tutorial/shape-attrs#通用属性)
+> 类型为绘图属性：[通用属性](/tutorial/shape-attrs#通用属性)
 
 xTip 中背景样式
 
@@ -1534,7 +1543,7 @@ const Legend = withLegend(CustomLegendView);
 
 ## 完整示例
 
-- [自定义 Legend](/zh/examples/component/legend#custom)
+- [自定义 Legend](/site/examples/component/legend/demo/custom.jsx)
 
 # tutorial/animation
 
@@ -1566,7 +1575,7 @@ F2 动画定义与 [Web Animations API](https://developer.mozilla.org/zh-CN/docs
 | `property` | [] | 声明需要变换的属性 |
 | `start` | Keyframe | 开始帧状态 |
 | `end` | Keyframe | 结束帧状态 |
-| `clip` | Clip | 裁剪区域动画，可参见[clip](/docs/tutorial/shape-attrs##裁剪) |
+| `clip` | Clip | 裁剪区域动画，可参见[clip](/tutorial/shape-attrs##裁剪) |
 
 #### easing
 
@@ -1695,7 +1704,7 @@ F2 动画定义与 [Web Animations API](https://developer.mozilla.org/zh-CN/docs
 />
 ```
 
-F2 在组件 Line 中内置了该功能，提供 endView 接口，可设置沿着线段移动的元素，具体可见 [demo](/examples/creative/case/#line-race)
+F2 在组件 Line 中内置了该功能，提供 endView 接口，可设置沿着线段移动的元素，具体可见 [demo](/site/examples/creative/case//demo/line-race.jsx)
 
 # tutorial/component
 
@@ -2704,7 +2713,7 @@ F2 同 G2 一样，基于《The Grammar of Graphics》(Leland Wilkinson 著)一�
 
 - [度量](./scale)
 
-- [几何标记](../api/geometry)
+- [几何标记](../api/chart/geometry)
 
 - [绘图属性](./shape-attrs)
 
@@ -2783,7 +2792,7 @@ order: 1
 ## 解决方式
 
 1. 先确定当前项目的 jsx 编译模式，打开 `tsconfig.json`
-2. 找到 `compilerOptions` 下的 `jsx` 配置项，如果没有则默认为 `react`，`react` 为 [classic](/zh/docs/tutorial/jsx-transform#classic-1) 编译模式，`react-jsx` 为 [automatic](/zh/docs/tutorial/jsx-transform#automatic-1) 编译模式
+2. 找到 `compilerOptions` 下的 `jsx` 配置项，如果没有则默认为 `react`，`react` 为 [classic](/tutorial/jsx-transform#classic-1) 编译模式，`react-jsx` 为 [automatic](/tutorial/jsx-transform#automatic-1) 编译模式
 
 ![](https://gw.alipayobjects.com/zos/finxbff/compress-tinypng/bb848e34-451f-4819-909d-e31d09a122f8.png)
 
@@ -2980,10 +2989,10 @@ F2 底层使用了 [G](https://g.antv.antgroup.com/api/basic/concept) 绘图引�
 
 对于不同的图形，位置的几何意义也不同，例如：
 
-- [Circle](/zh/tutorial/shape#circle) [Arc](/zh/tutorial/shape#arc) [Sector](/zh/tutorial/shape#sector)为圆心位置，使用 [cx/cy](/zh/tutorial/shape#circle)
-- [Group](/zh/tutorial//group) [Rect](/zh/tutorial/rect)，[Image](/zh/tutorial/image) 为左上角顶点位置，使用 [x/y](/zh/tutorial/rect)
-- [Text](/zh/tutorial/text) 为文本锚点位置
-- [Line](/zh/tutorial/line)，[Polyline](/zh/tutorial/polyline)，[Polygon](/zh/tutorial/polygon)，[Path](/zh/tutorial/path) 为包围盒左上角顶点位置
+- [Circle](/tutorial/shape#circle) [Arc](/tutorial/shape#arc) [Sector](/tutorial/shape#sector)为圆心位置，使用 [cx/cy](/tutorial/shape#circle)
+- [Group](/tutorial/shape#group) [Rect](/tutorial/shape#rect)，[Image](/tutorial/shape#image) 为左上角顶点位置，使用 [x/y](/tutorial/shape#rect)
+- [Text](/tutorial/shape#text) 为文本锚点位置
+- [Line](/tutorial/shape#line)，[Polyline](/tutorial/shape#polyline)，[Polygon](/tutorial/shape#polygon)，[Path](/tutorial/shape#path) 为包围盒左上角顶点位置
 
 | 属性名   | 描述                |
 | -------- | ------------------- |
@@ -2992,32 +3001,46 @@ F2 底层使用了 [G](https://g.antv.antgroup.com/api/basic/concept) 绘图引�
 ### 通用属性
 
 | 属性名 | 描述 |
-| --- | --- |
+| ------ | ---- |
+
 | `zIndex` | 控制图行显示层级。默认 0 |
-| `clip` | Clip | 创建元素的可显示区域，区域内的部分显示，区域外的隐藏。参见(./shape-attrs#裁剪) |
+
+| `clip` | 创建元素的可显示区域，区域内的部分显示，区域外的隐藏。参见(./shape-attrs#裁剪) |
+
 | `visibility` | 控制图形的可见性。参见 [MDN]（https://developer.mozilla.org/en-US/docs/Web/CSS/visibility） |
+
 | `opacity` | 设置图形和图片透明度的属性，默认值是 1。 数值的范围从 0.0 （完全透明）到 1.0 （完全不透明）。 |
+
 | `fill` | 填充色、[渐变](./shape-attrs#渐变色)或[纹理](./shape-attrs#纹理)，默认值为空。 |
+
 | `fillOpacity` | 用于设置图形填充颜色的透明度，默认值是 1。 |
+
 | `stroke` | 描边色、[渐变](./shape-attrs#渐变色)或[纹理](./shape-attrs#纹理)，默认值为空； |
+
 | `strokeOpacity` | 用于设置边颜色的透明度，默认值是 1。 |
+
 | `shadowType` | 描述阴影类型，目前支持 'outer' 外阴影和 'inner' 内阴影 |
+
 | `shadowColor` | 描述阴影颜色的属性，支持 String，暂不支持渐变或纹理，参见 [MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/CanvasRenderingContext2D/shadowColor)。 |
+
 | `shadowBlur` | 描述模糊效果程度的属性； 它既不对应像素值也不受当前转换矩阵的影响。 默认值是 0，参见 [MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/CanvasRenderingContext2D/shadowBlur)。 |
+
 | `shadowOffsetX` | 描述阴影水平偏移距离的属性，参见 [MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/CanvasRenderingContext2D/shadowOffsetX)。 |
+
 | `shadowOffsetY` | 描述阴影垂直偏移距离的属性，参见 [MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/CanvasRenderingContext2D/shadowOffsetY)。 |
+
 | `filter` | 滤镜，目前支持单个或多个滤镜叠加,支持 blur、brightness、drop-shadow、contrast、grayscale、saturate、sepia、hue-rotate、invert 几种滤镜效果。参见 [MDN]（https://developer.mozilla.org/zh-CN/docs/Web/API/CanvasRenderingContext2D/filter） |
+
 | `cursor` | 鼠标样式。参见 [MDN]（https://developer.mozilla.org/zh-CN/docs/Web/CSS/cursor） |
 
 ### 线条属性
 
 | 属性名 | 描述 |
-| --- | --- |
+| ------ | ---- |
+
 | `lineCap` | Canvas 2D API 指定如何绘制每一条线段末端的属性。有 3 个可能的值，分别是：`butt`, `round` and `square`。默认值是 butt，参见 [MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/CanvasRenderingContext2D/lineCap). |
-| `lineJoin` | Canvas 2D API 用来设置 2 个长度不为 0 的相连部分（线段，圆弧，曲线）如何连接在一起的属性（长度为 0 的变形部分，其指定的末端和控制点在同一位置，会被忽略），参见 [MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/CanvasRenderingContext2D/lineJoin). |
-| `lineWidth` | Canvas 2D API 设置线段厚度的属性（即线段的宽度）。当获取属性值时，它可以返回当前的值（默认值是 1.0 ）。 当给属性赋值时， 0、 负数、 Infinity 和 NaN 都会被忽略；除此之外，都会被赋予一个新值，参见 [MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/CanvasRenderingContext2D/lineWidth). |
-| `miterLimit` | Canvas 2D API 设置斜接面限制比例的属性。 当获取属性值时， 会返回当前的值（默认值是 10.0 ）。当给属性赋值时， 0、负数、 Infinity 和 NaN 都会被忽略；除此之外都会被赋予一个新值。，参见 [MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/CanvasRenderingContext2D/miterLimit). |
-| `lineDash` | 设置线的虚线样式，可以指定一个数组。一组描述交替绘制线段和间距（坐标空间单位）长度的数字。 如果数组元素的数量是奇数， 数组的元素会被复制并重复。例如， [5, 15, 25] 会变成 [5, 15, 25, 5, 15, 25]。这个属性取决于浏览器是否支持 `setLineDash()` 函数，详情参考 [setLineDash](https://developer.mozilla.org/zh-CN/docs/Web/API/CanvasRenderingContext2D/setLineDash)。 |
+
+| `lineJoin` | Canvas 2D API 用来设置 2 个长度不为 0 的相连部分（线段，圆弧，曲线）如何连接在一起的属性（长度为 0 的变形部分，其指定的末端和控制点在同一位置，会被忽略），参见 [MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/CanvasRenderingContext2D/lineJoin). | | `lineWidth` | Canvas 2D API 设置线段厚度的属性（即线段的宽度）。当获取属性值时，它可以返回当前的值（默认值是 1.0 ）。 当给属性赋值时， 0、 负数、 Infinity 和 NaN 都会被忽略；除此之外，都会被赋予一个新值，参见 [MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/CanvasRenderingContext2D/lineWidth). | | `miterLimit` | Canvas 2D API 设置斜接面限制比例的属性。 当获取属性值时， 会返回当前的值（默认值是 10.0 ）。当给属性赋值时， 0、负数、 Infinity 和 NaN 都会被忽略；除此之外都会被赋予一个新值。，参见 [MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/CanvasRenderingContext2D/miterLimit). | | `lineDash` | 设置线的虚线样式，可以指定一个数组。一组描述交替绘制线段和间距（坐标空间单位）长度的数字。 如果数组元素的数量是奇数， 数组的元素会被复制并重复。例如， [5, 15, 25] 会变成 [5, 15, 25, 5, 15, 25]。这个属性取决于浏览器是否支持 `setLineDash()` 函数，详情参考 [setLineDash](https://developer.mozilla.org/zh-CN/docs/Web/API/CanvasRenderingContext2D/setLineDash)。 |
 
 ### 文本属性
 
@@ -3117,7 +3140,7 @@ fill: {
 
 ## 历史用法
 
-历史用法见 https://f2-v4.antv.vision/zh/docs/tutorial/shape-attrs#渐变色
+历史用法见 https://f2-v4.antv.visiondocs/tutorial/shape-attrs#渐变色
 
 # tutorial/shape
 
@@ -3130,7 +3153,7 @@ F2 底层使用了 [G](https://g.antv.antgroup.com/api/basic/concept) 绘图引�
 
 ## 如何使用
 
-详见：[图形使用](/zh/docs/tutorial/graphic)
+详见：[图形使用](/tutorial/graphic)
 
 ## 图形标签
 
@@ -3158,21 +3181,21 @@ F2 底层使用了 [G](https://g.antv.antgroup.com/api/basic/concept) 绘图引�
 | `animation` | Animation | 图形动画                       |
 | `onPan` 等  | Event     | 图形事件                       |
 
-### Style [绘图属性](/zh/docs/tutorial/shape-attrs)
+### Style [绘图属性](/tutorial/shape-attrs)
 
-更多详情可见：[绘图属性](/zh/docs/tutorial/shape-attrs)
+更多详情可见：[绘图属性](/tutorial/shape-attrs)
 
-### Animation [图形动画属性](/zh/docs/tutorial/animation)
+### Animation [图形动画属性](/tutorial/animation)
 
-更多详情可见：[图形动画属性](/zh/docs/tutorial/animation)
+更多详情可见：[图形动画属性](/tutorial/animation)
 
-### Event [图形事件属性](/zh/docs/tutorial/event)
+### Event [图形事件属性](/tutorial/event)
 
-更多详情可见：[图形事件属性](/zh/docs/tutorial/event)
+更多详情可见：[图形事件属性](/tutorial/event)
 
 ### 演示
 
-- [图形标签](/zh/examples/component/shape#shape)
+- [图形标签](/site/examples/component/shape/demo/shape.jsx)
 
 ## group
 
