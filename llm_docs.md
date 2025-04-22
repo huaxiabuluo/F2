@@ -6,6 +6,28 @@
 1. 组件使用
   - 所有图表组件均采用 JSX 语法描述
   - 遵循声明式的组件编写方式
+  - F2 提供了如下组件，请参考其对应的文档：
+    * Line - 折线图
+    * Area - 面积图
+    * Interval - 柱状图
+    * Point - 散点图
+    * Axis - 坐标轴
+    * Legend - 图例
+    * TextGuide - 文本标注
+    * PointGuide - 点标注
+    * LineGuide - 线标注
+    * ArcGuide - 弧标注
+    * RectGuide - 矩形标注
+    * ImageGuide - 图片标注
+    * TagGuide - 标签标注
+    * LottieGuide - Lottie 动画标注
+    * PolylineGuide - 折线标注
+    * Tooltip - 交互提示
+    * Treemap - 矩形树图
+    * Sunburst - 旭日图
+    * ScrollBar - 滚动条
+    * Candlestick - K线图/蜡烛图
+  
    
 2. 运行环境
   - Canvas context 获取方式因运行环境而异
