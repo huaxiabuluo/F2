@@ -51,6 +51,7 @@ We also provide developers with flexible extension mechanisms, including shape, 
 - English documents: https://f2.antv.vision/en
 - Chart demos: https://f2.antv.vision/en/examples
 - 中文文档: https://f2.antv.vision/zh
+- [**AIGC Documentation**](./docs/aigc/README.md) - Comprehensive guide designed for AIGC/LLM scenarios
 
 ## Other libraries base on F2
 
