@@ -45,6 +45,7 @@ $ npm install @antv/f2
 - [使用教程](https://f2.antv.vision/zh/docs/tutorial/getting-started)
 - [API](https://f2.antv.vision/zh/docs/api)
 - [图表示例](https://f2.antv.vision/zh/examples)
+- [**AIGC 专用文档**](./docs/aigc/README.md) - 为大模型 AIGC 场景设计的完整使用指南
 
 ## 快速开始
 
