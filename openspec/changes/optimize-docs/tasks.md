@@ -32,7 +32,7 @@
 
 ### 1. 优先级 P0 - 核心 API 组件 (4个)
 
-- [ ] 1.1 优化 `api/chart/pieLabel.zh.md` - PieLabel 饼图标签组件
+- [x] 1.1 优化 `api/chart/pieLabel.zh.md` - PieLabel 饼图标签组件 (commit `5f2c0b796`)
 - [ ] 1.2 优化 `api/chart/legend.zh.md` - Legend 图例组件
 - [ ] 1.3 优化 `api/canvas.zh.md` - Canvas 画布组件
 - [ ] 1.4 优化 `api/component.zh.md` - Component 组件文档
@@ -98,7 +98,7 @@
 
 - [ ] 8.1 验证所有文档链接有效
 - [ ] 8.2 验证所有类型定义与源码一致
-- [ ] 8.3 生成 `reports/pieLabel-doc-improvement.md`
+- [x] 8.3 生成 `reports/pieLabel-doc-improvement.md` (完成)
 - [ ] 8.4 生成 `reports/legend-doc-improvement.md`
 - [ ] 8.5 生成 `reports/canvas-doc-improvement.md`
 - [ ] 8.6 生成 `reports/component-doc-improvement.md`
