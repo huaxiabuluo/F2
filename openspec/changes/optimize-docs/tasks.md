@@ -106,14 +106,74 @@
 
 ## 任务执行说明
 
+### 前置要求
+
 1. **按优先级顺序执行**: P0 → P1 → P2
-2. **每个文档优化包含**:
-   - 添加 TypeScript 类型定义
-   - 补充 Props 表格和默认值
-   - 添加 3-5 个用法示例
-   - 修正文档链接（使用 `/` 开头的绝对路径）
-   - 验证与源码一致性
-3. **每个优化完成后生成报告**:
-   - 报告放在 `reports/` 目录
-   - 命名格式: `[component-name]-doc-improvement.md`
-   - 包含问题分析、改进内容、优化效果、源码验证
+2. **参考测试用例**: 每个文档优化前，先查看 `packages/f2/test/` 中对应的测试用例
+3. **阅读已优化文档**: 参考 `tag-guide.zh.md`、`axis.zh.md` 等已优化文档的格式
+
+### 每个文档优化包含
+
+- 添加 TypeScript 类型定义
+- 补充 Props 表格和默认值
+- 添加 3-5 个用法示例
+- 修正文档链接（使用 `/` 开头的绝对路径）
+- 验证与源码一致性
+- **jsx 代码块去除末尾分号**
+
+### 单个文档完成流程
+
+每个文档优化完成后，按以下顺序执行：
+
+1. **优化文档** - 修改 `site/docs/...` 文件
+2. **生成报告** - 在 `reports/` 目录生成优化报告
+3. **Git 提交** - 及时提交变更（使用中文 commit message）
+
+#### Git 提交规范
+
+```bash
+# 提交格式（跳过 git hooks）
+git add site/docs/[文件路径] reports/[报告文件]
+git commit --no-verify -m "docs([scope]): [中文描述]"
+```
+
+**提交示例**：
+```bash
+git add site/docs/api/chart/pieLabel.zh.md reports/pieLabel-doc-improvement.md
+git commit --no-verify -m "docs(pieLabel): 优化 PieLabel 组件文档
+
+- 添加 TypeScript 类型定义
+- 补充 Props 表格和默认值
+- 扩展用法示例至 8 个
+- 添加布局说明和常见问题"
+```
+
+### 测试用例参考
+
+优化文档前，在 `packages/f2/test/` 中查找相关测试用例：
+
+```bash
+# 示例：查找 PieLabel 测试
+find packages/f2/test -name "*ielabel*" -o -name "*PieLabel*"
+
+# 示例：查找 Legend 测试
+find packages/f2/test/components/legend
+```
+
+### 优化报告生成
+
+每个优化完成后生成报告，必须包含：
+
+1. **优化前后对比评分**（参考 `@reports/tag-guide-doc-improvement.md`）
+2. **类型定义分析**（注明源码位置）
+3. **主要改进清单**
+4. **关键修正说明**
+5. **测试用例验证**
+
+报告放在 `reports/` 目录，命名格式: `[component-name]-doc-improvement.md`
+
+### 代码规范
+
+- jsx 代码块去除末尾无用分号
+- 代码注释极简，详细说明放在代码块外
+- 示例代码可直接复制使用
