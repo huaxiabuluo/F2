@@ -446,13 +446,68 @@ class ConditionalComponent extends Component {
 }
 ```
 
+### 与图表结合
+
+在图表中使用自定义组件：
+
+```jsx
+import { Chart, Component, jsx } from '@antv/f2';
+
+// 自定义数据标签组件
+class DataLabel extends Component {
+  render() {
+    const { props, context } = this;
+    const { data, xField, yField } = props;
+    const { px2hd } = context;
+
+    return (
+      <group>
+        {data.map((item) => {
+          const x = px2hd(item[xField]);
+          const y = px2hd(item[yField]);
+          return (
+            <text
+              attrs={{
+                text: String(item.value),
+                x,
+                y: y - 10,
+                fill: '#000',
+                fontSize: '12px',
+                textAlign: 'center',
+              }}
+            />
+          );
+        })}
+      </group>
+    );
+  }
+}
+
+// 使用自定义组件
+const App = () => {
+  const data = [
+    { genre: 'Action', value: 100 },
+    { genre: 'Comedy', value: 80 },
+  ];
+
+  return (
+    <Canvas pixelRatio={window.devicePixelRatio}>
+      <Chart data={data}>
+        <interval x="genre" y="value" />
+        <DataLabel data={data} xField="genre" yField="value" />
+      </Chart>
+    </Canvas>
+  );
+};
+```
+
 ## ComponentProps 属性
 
 Component 基类支持的属性：
 
 | 属性名 | 类型 | 默认值 | 说明 |
 |--------|------|--------|------|
-| `zIndex` | `number` | - | 组件的层级索引，用于控制渲染顺序 |
+| `zIndex` | `number` | `0` | 组件的层级索引，用于控制渲染顺序，值越大越靠前 |
 
 ## 常见问题
 
