@@ -66,7 +66,7 @@
 ### 5. 优先级 P1 - 组件与图形教程 (10个)
 
 - [x] 5.1 优化 `tutorial/component.zh.md` - 组件 (中文) (commit `0f14c4f6f`)
-- [ ] 5.2 优化 `tutorial/coordinate.zh.md` - 坐标系 (中文)
+- [x] 5.2 优化 `tutorial/coordinate.zh.md` - 坐标系 (中文) (commit `4dde81d91`)
 - [ ] 5.3 优化 `tutorial/coordinate.en.md` - 坐标系 (英文)
 - [ ] 5.4 优化 `tutorial/scale.zh.md` - 度量 (中文)
 - [ ] 5.5 优化 `tutorial/scale.en.md` - 度量 (英文)
