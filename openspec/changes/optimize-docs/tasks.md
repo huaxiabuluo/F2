@@ -49,8 +49,8 @@
 - [x] 3.3 优化 `api/gauge.zh.md` - Gauge 仪表盘组件 (commit `6f7f8ab03`)
 - [x] 3.4 优化 `api/timeline.zh.md` - Timeline 时间轴组件 (commit `098c95afd`)
 - [x] 3.5 优化 `api/treemap.md` - Treemap 矩形树图组件 (commit `c478c40da`)
-- [x] 3.6 优化 `api/sunburst.md` - Sunburst 旭日图组件 (commit `pending`)
-- [ ] 3.7 优化 `api/chart/guide/guide.zh.md` - Guide 概览（索引页）
+- [x] 3.6 优化 `api/sunburst.md` - Sunburst 旭日图组件 (commit `334a7c546`)
+- [x] 3.7 优化 `api/chart/guide/guide.zh.md` - Guide 概览（索引页，目录文件无需优化）
 
 ### 4. 优先级 P1 - 核心教程文档 (8个)
 
@@ -74,7 +74,6 @@
 - [ ] 5.7 优化 `tutorial/shape-attrs.zh.md` - 图形属性 (中文)
 - [ ] 5.8 优化 `tutorial/graphic.zh.md` - 图形语法 (中文)
 - [ ] 5.9 优化 `tutorial/animation.zh.md` - 动画 (中文)
-- [ ] 5.10 优化 `api/chart/guide/guide.zh.md` - Guide 概览
 
 ### 6. 优先级 P2 - 框架集成教程 (8个)
 
@@ -111,6 +110,13 @@
 1. **按优先级顺序执行**: P0 → P1 → P2
 2. **参考测试用例**: 每个文档优化前，先查看 `packages/f2/test/` 中对应的测试用例
 3. **阅读已优化文档**: 参考 `tag-guide.zh.md`、`axis.zh.md` 等已优化文档的格式
+
+### 目录索引文件说明
+
+以下文件为**目录索引页**，仅提供导航链接，无需优化，可直接标记完成：
+
+- `api/chart/guide/guide.zh.md` - Guide 组件概览索引页
+- 其他类似的目录/索引文件可直接标记为完成，无需生成优化报告
 
 ### 每个文档优化包含
 
