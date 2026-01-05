@@ -33,9 +33,9 @@
 ### 1. 优先级 P0 - 核心 API 组件 (4个)
 
 - [x] 1.1 优化 `api/chart/pieLabel.zh.md` - PieLabel 饼图标签组件 (commit `5f2c0b796`)
-- [ ] 1.2 优化 `api/chart/legend.zh.md` - Legend 图例组件
-- [ ] 1.3 优化 `api/canvas.zh.md` - Canvas 画布组件
-- [ ] 1.4 优化 `api/component.zh.md` - Component 组件文档
+- [x] 1.2 优化 `api/chart/legend.zh.md` - Legend 图例组件 (commit `9d392f0b2`)
+- [x] 1.3 优化 `api/canvas.zh.md` - Canvas 画布组件 (commit `cdc726cb1`)
+- [x] 1.4 优化 `api/component.zh.md` - Component 组件文档 (commit `1658543ad`)
 
 ### 2. 优先级 P0 - 入口 API (2个)
 
