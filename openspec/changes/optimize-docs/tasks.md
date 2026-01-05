@@ -48,8 +48,8 @@
 - [x] 3.2 优化 `api/chart/magnifier.zh.md` - Magnifier 放大镜组件 (commit `cc303e9ff`)
 - [x] 3.3 优化 `api/gauge.zh.md` - Gauge 仪表盘组件 (commit `6f7f8ab03`)
 - [x] 3.4 优化 `api/timeline.zh.md` - Timeline 时间轴组件 (commit `098c95afd`)
-- [x] 3.5 优化 `api/treemap.md` - Treemap 矩形树图组件 (commit `pending`)
-- [ ] 3.6 优化 `api/sunburst.md` - Sunburst 旭日图组件
+- [x] 3.5 优化 `api/treemap.md` - Treemap 矩形树图组件 (commit `c478c40da`)
+- [x] 3.6 优化 `api/sunburst.md` - Sunburst 旭日图组件 (commit `pending`)
 - [ ] 3.7 优化 `api/chart/guide/guide.zh.md` - Guide 概览（索引页）
 
 ### 4. 优先级 P1 - 核心教程文档 (8个)
