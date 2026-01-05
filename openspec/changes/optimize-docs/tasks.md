@@ -61,7 +61,7 @@
 - [x] 4.5 优化 `tutorial/grammar.zh.md` - 图表语法 (中文) (commit `3de5b2d9a`)
 - [x] 4.6 优化 `tutorial/grammar.en.md` - 图表语法 (英文) (commit `4b3ecde76`)
 - [x] 4.7 优化 `tutorial/data.zh.md` - 数据处理 (中文) (commit `501161c47`)
-- [ ] 4.8 优化 `tutorial/data.en.md` - 数据处理 (英文)
+- [x] 4.8 优化 `tutorial/data.en.md` - 数据处理 (英文) (commit `32004c9e5`)
 
 ### 5. 优先级 P1 - 组件与图形教程 (10个)
 
