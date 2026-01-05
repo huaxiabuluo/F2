@@ -97,7 +97,7 @@ canvas.render();
 | `width` | `number` | - | 画布宽度（优先使用 canvas 元素的 width） |
 | `height` | `number` | - | 画布高度（优先使用 canvas 元素的 height） |
 | `animate` | `boolean` | `true` | 是否开启动画 |
-| `children` | `ReactNode` | - | 子组件 |
+| `children` | `JSX.Element` | - | 通过 JSX 语法创建的 F2 组件节点（如 `<Chart />`） |
 
 ### Chart 图表组件
 
@@ -108,7 +108,7 @@ canvas.render();
 | `data` | `Data[]` | - | **必填**，数据源 |
 | `scale` | `ScaleConfig` | - | 度量配置 |
 | `coord` | `CoordConfig` | - | 坐标系配置 |
-| `children` | `ReactNode` | - | 子组件 |
+| `children` | `JSX.Element` | - | 通过 JSX 语法创建的 F2 组件节点（如 `<Interval />`、`<Axis />` 等） |
 
 ### Interval 柱状图组件
 

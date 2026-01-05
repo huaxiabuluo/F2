@@ -28,9 +28,9 @@ interface ScrollBarProps {
   background?: ShapeProps;
   /** 滚动条样式 */
   barStyle?: ShapeProps;
-  /** 缩放和平移模式 */
-  mode?: 'x' | 'y' | ['x', 'y'] | null;
-  /** 初始显示范围，0~1 之间 */
+  /** 滚动模式，支持 x 轴、y 轴或双向滚动。必填 */
+  mode?: 'x' | 'y' | ['x', 'y'];
+  /** 初始显示范围，值为 0~1 之间的数字（如 [0.2, 0.8]）。必填，不传会导致手势操作报错 */
   range?: ZoomRange;
   /** 是否支持平移 */
   pan?: boolean;
@@ -84,7 +84,7 @@ const data = [
   <Chart data={data}>
     <Axis field="genre" />
     <Line x="genre" y="sold" />
-    <ScrollBar />
+    <ScrollBar mode="x" range={[0.5, 1]} />
   </Chart>
 </Canvas>
 ```
@@ -95,8 +95,8 @@ const data = [
 
 | 属性 | 类型 | 默认值 | 说明 |
 |------|------|--------|------|
-| `mode` | `'x' \| 'y' \| ['x', 'y'] \| null` | `'x'` | 滚动模式，支持 x 轴、y 轴或双向滚动 |
-| `range` | `ZoomRange` | `[0, 1]` | 初始显示范围，值为 0~1 之间的数字 |
+| `mode` | `'x' \| 'y' \| ['x', 'y']` | - | 滚动模式，支持 x 轴、y 轴或双向滚动。**必填** |
+| `range` | `ZoomRange` | - | 初始显示范围，值为 0~1 之间的数字（如 `[0.5, 1]`）。**必填**，不传会导致手势操作报错 |
 | `visible` | `boolean` | `true` | 是否显示滚动条 |
 
 ### 手势配置
@@ -149,7 +149,7 @@ const data = [
 <Canvas context={context}>
   <Chart data={data}>
     <Line x="date" y="value" />
-    <ScrollBar />
+    <ScrollBar mode="x" range={[0.5, 1]} />
   </Chart>
 </Canvas>
 ```
@@ -162,7 +162,7 @@ const data = [
 <Canvas context={context}>
   <Chart data={data}>
     <Line x="value" y="category" />
-    <ScrollBar mode="y" position="right" />
+    <ScrollBar mode="y" position="right" range={[0.5, 1]} />
   </Chart>
 </Canvas>
 ```
@@ -175,7 +175,7 @@ const data = [
 <Canvas context={context}>
   <Chart data={data}>
     <Point x="x" y="y" />
-    <ScrollBar mode={['x', 'y']} />
+    <ScrollBar mode={['x', 'y']} range={[0.5, 1]} />
   </Chart>
 </Canvas>
 ```
@@ -201,7 +201,7 @@ const data = [
 <Canvas context={context}>
   <Chart data={data}>
     <Line x="date" y="value" />
-    <ScrollBar pan={false} pinch={false} />
+    <ScrollBar mode="x" range={[0.5, 1]} pan={false} pinch={false} />
   </Chart>
 </Canvas>
 ```
@@ -215,6 +215,8 @@ const data = [
   <Chart data={data}>
     <Line x="date" y="value" />
     <ScrollBar
+      mode="x"
+      range={[0.5, 1]}
       position="top"
       style={{ margin: '20px' }}
       background={{ fill: '#f0f0f0', stroke: '#ccc' }}
@@ -233,6 +235,8 @@ const data = [
   <Chart data={data}>
     <Line x="date" y="value" />
     <ScrollBar
+      mode="x"
+      range={[0.5, 1]}
       swipe={true}
       swipeDuration={1500}
     />
@@ -257,7 +261,7 @@ function ChartComponent() {
     <Canvas context={context}>
       <Chart data={data}>
         <Line x="date" y="value" />
-        <ScrollBar onChange={handleChange} />
+        <ScrollBar mode="x" range={[0.5, 1]} onChange={handleChange} />
       </Chart>
     </Canvas>
   )
@@ -272,7 +276,7 @@ function ChartComponent() {
 <Canvas context={context}>
   <Chart data={largeData}>
     <Line x="date" y="value" />
-    <ScrollBar minCount={20} />
+    <ScrollBar mode="x" range={[0.5, 1]} minCount={20} />
   </Chart>
 </Canvas>
 ```
@@ -285,7 +289,7 @@ function ChartComponent() {
 
 ```jsx
 // 设置最少显示 20 条数据
-<ScrollBar minCount={20} />
+<ScrollBar mode="x" range={[0.5, 1]} minCount={20} />
 ```
 
 ### 横扫不生效
@@ -293,7 +297,7 @@ function ChartComponent() {
 确保 `swipe` 属性设置为 `true`，并且数据范围有足够的空间进行横扫。
 
 ```jsx
-<ScrollBar swipe={true} swipeDuration={1000} />
+<ScrollBar mode="x" range={[0.5, 1]} swipe={true} swipeDuration={1000} />
 ```
 
 ### 滚动条位置不合适
@@ -302,6 +306,8 @@ function ChartComponent() {
 
 ```jsx
 <ScrollBar
+  mode="x"
+  range={[0.5, 1]}
   position="top"
   style={{ marginTop: '10px' }}
 />
@@ -312,7 +318,7 @@ function ChartComponent() {
 如果图表有多个坐标轴，设置 `autoFit` 为 `true` 可以自动同步其他坐标轴的显示范围。
 
 ```jsx
-<ScrollBar autoFit={true} />
+<ScrollBar mode="x" range={[0.5, 1]} autoFit={true} />
 ```
 
 ## demo 示例
