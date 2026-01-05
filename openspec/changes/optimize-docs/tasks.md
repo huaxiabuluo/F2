@@ -39,8 +39,8 @@
 
 ### 2. 优先级 P0 - 入口 API (2个)
 
-- [ ] 2.1 优化 `api/f2.zh.md` - F2 入口 API (中文)
-- [ ] 2.2 优化 `api/f2.en.md` - F2 入口 API (英文)
+- [x] 2.1 优化 `api/f2.zh.md` - F2 入口 API (中文) (commit `1658543ad`)
+- [x] 2.2 优化 `api/f2.en.md` - F2 入口 API (英文) (commit `1658543ad`)
 
 ### 3. 优先级 P1 - 辅助组件 API (8个)
 
