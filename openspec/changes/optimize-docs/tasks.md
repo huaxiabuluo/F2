@@ -71,8 +71,8 @@
 - [x] 5.4 优化 `tutorial/scale.zh.md` - 度量 (中文) (commit `3334ac954`)
 - [x] 5.5 优化 `tutorial/scale.en.md` - 度量 (英文) (commit `ed05931f8`)
 - [x] 5.6 优化 `tutorial/shape.zh.md` - 图形 (中文) (commit `b63b6a70c`)
-- [x] 5.7 优化 `tutorial/shape-attrs.zh.md` - 图形属性 (中文) (commit `pending`)
-- [ ] 5.8 优化 `tutorial/graphic.zh.md` - 图形语法 (中文)
+- [x] 5.7 优化 `tutorial/shape-attrs.zh.md` - 图形属性 (中文) (commit `b879af7fc`)
+- [x] 5.8 优化 `tutorial/graphic.zh.md` - 图形语法 (中文) (commit `pending`)
 - [ ] 5.9 优化 `tutorial/animation.zh.md` - 动画 (中文)
 
 ### 6. 优先级 P2 - 框架集成教程 (8个)
