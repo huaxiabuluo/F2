@@ -57,7 +57,7 @@
 - [x] 4.1 优化 `tutorial/getting-started.zh.md` - 快速开始 (中文) (commit `pending`)
 - [x] 4.2 优化 `tutorial/getting-started.en.md` - 快速开始 (英文) (commit `2ea84becc`)
 - [x] 4.3 优化 `tutorial/understanding.zh.md` - 核心概念 (中文) (commit `600890090`)
-- [ ] 4.4 优化 `tutorial/understanding.en.md` - 核心概念 (英文)
+- [x] 4.4 优化 `tutorial/understanding.en.md` - 核心概念 (英文) (commit `4d5ff29a3`)
 - [ ] 4.5 优化 `tutorial/grammar.zh.md` - 图表语法 (中文)
 - [ ] 4.6 优化 `tutorial/grammar.en.md` - 图表语法 (英文)
 - [ ] 4.7 优化 `tutorial/data.zh.md` - 数据处理 (中文)
