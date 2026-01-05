@@ -24,7 +24,7 @@ class MyComponent extends Component {
   render() {
     const { props } = this;
     const { text, x, y } = props;
-    return <text attrs={{ text, x, y }} />;
+    return <text style={{ text, x, y }} />;
   }
 }
 ```
@@ -84,7 +84,7 @@ class Hello extends Component {
     const { count } = state;
     return (
       <rect
-        attrs={{
+        style={{
           x: 10,
           y: 10,
           width: 10,
@@ -158,7 +158,7 @@ class Counter extends Component {
 
   render() {
     const { count } = this.state;
-    return <text attrs={{ text: `Count: ${count}` }} />;
+    return <text style={{ text: `Count: ${count}` }} />;
   }
 }
 ```
@@ -194,7 +194,7 @@ class MyComponent extends Component<MyComponentProps> {
   render() {
     const { props } = this;
     const { title, value, color = 'red' } = props;
-    return <text attrs={{ text: `${title}: ${value}`, fill: color }} />;
+    return <text style={{ text: `${title}: ${value}`, fill: color }} />;
   }
 }
 ```
@@ -210,7 +210,7 @@ class MyComponent extends Component {
 
   render() {
     const { color, size } = this.props;
-    return <text attrs={{ fill: color, fontSize: size }} />;
+    return <text style={{ fill: color, fontSize: size }} />;
   }
 }
 ```
@@ -241,7 +241,7 @@ class ContextAwareComponent extends Component {
 
     return (
       <text
-        attrs={{
+        style={{
           x: px2hd(50),
           y: px2hd(50),
           text: 'Hello',
@@ -307,7 +307,7 @@ class DataLabel extends Component {
           const y = px2hd(item[yField]);
           return (
             <text
-              attrs={{
+              style={{
                 text: String(item[yField]),
                 x,
                 y: y - 10,
@@ -346,20 +346,20 @@ class CustomLegend extends Component {
         {items.map((item, index) => (
           <g
             key={item.name}
-            attrs={{
+            style={{
               transform: `translate(${x}, ${y + index * 30})`,
             }}
             onClick={() => onClick(item)}
           >
             <rect
-              attrs={{
+              style={{
                 width: 20,
                 height: 20,
                 fill: item.color,
               }}
             />
             <text
-              attrs={{
+              style={{
                 x: 30,
                 y: 15,
                 text: item.name,
@@ -387,7 +387,7 @@ class ConditionalComponent extends Component {
       return null;
     }
 
-    return <rect attrs={{ x: 0, y: 0, width: 100, height: 100, fill: 'red' }} />;
+    return <rect style={{ x: 0, y: 0, width: 100, height: 100, fill: 'red' }} />;
   }
 }
 ```
@@ -431,7 +431,7 @@ class AnimatedComponent extends Component {
 
     return (
       <rect
-        attrs={{
+        style={{
           x: 0,
           y: 100 - height,
           width: 50,
@@ -485,7 +485,7 @@ class ChildComponent extends Component {
         {data.map((item) => (
           <rect
             key={item.id}
-            attrs={{ x: item.x, y: item.y, width: 50, height: 50 }}
+            style={{ x: item.x, y: item.y, width: 50, height: 50 }}
             onClick={() => onItemClick(item)}
           />
         ))}
@@ -510,7 +510,7 @@ class OptimizedComponent extends Component {
 
   render() {
     const { props } = this;
-    return <text attrs={{ text: props.value }} />;
+    return <text style={{ text: props.value }} />;
   }
 }
 ```
@@ -522,14 +522,14 @@ class OptimizedComponent extends Component {
 class BadComponent extends Component {
   render() {
     const style = { color: 'red' }; // 每次渲染都创建新对象
-    return <text attrs={style} />;
+    return <text style={style} />;
   }
 }
 
 // 正确示例
 class GoodComponent extends Component {
   render() {
-    return <text attrs={{ color: 'red' }} />;
+    return <text style={{ color: 'red' }} />;
   }
 }
 ```

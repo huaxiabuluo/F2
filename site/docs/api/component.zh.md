@@ -108,7 +108,7 @@ class MyComponent extends Component {
     const { count = 0 } = state;
     return (
       <text
-        attrs={{
+        style={{
           text: `Count: ${count}`,
           x: '50px',
           y: '50px',
@@ -198,7 +198,7 @@ class TextComponent extends Component {
     const { text, x = 0, y = 0 } = props;
     return (
       <text
-        attrs={{
+        style={{
           text,
           x,
           y,
@@ -236,7 +236,7 @@ class Counter extends Component {
     const { count } = state;
     return (
       <text
-        attrs={{
+        style={{
           text: `Count: ${count}`,
           x: '50px',
           y: '50px',
@@ -293,7 +293,7 @@ class LifecycleComponent extends Component {
     const { value } = props;
     return (
       <text
-        attrs={{
+        style={{
           text: String(value),
           x: '50px',
           y: '50px',
@@ -324,7 +324,7 @@ class ContextComponent extends Component {
 
     return (
       <text
-        attrs={{
+        style={{
           text,
           x: width / 2,
           y: height / 2,
@@ -364,7 +364,7 @@ class ForceUpdateComponent extends Component {
     const { data } = state;
     return (
       <text
-        attrs={{
+        style={{
           text: `Data length: ${data.length}`,
           x: '50px',
           y: '50px',
@@ -391,7 +391,7 @@ class AnimatedComponent extends Component {
     const { x, y } = props;
     return (
       <rect
-        attrs={{
+        style={{
           x,
           y,
           width: '100px',
@@ -435,7 +435,7 @@ class ConditionalComponent extends Component {
 
     return (
       <text
-        attrs={{
+        style={{
           text,
           x: '50px',
           y: '50px',
@@ -467,7 +467,7 @@ class DataLabel extends Component {
           const y = px2hd(item[yField]);
           return (
             <text
-              attrs={{
+              style={{
                 text: String(item.value),
                 x,
                 y: y - 10,
