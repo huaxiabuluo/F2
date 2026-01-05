@@ -315,10 +315,13 @@ xTipBackground / yTipBackground: {
   customText={(record) => {
     const { origin } = record;
     return (
-      <text attrs={{
-        fill: '#fff',
-        text: `类型：${origin.genre}\n销量：${origin.sold}`,
-      }} />
+      <text
+        style={{
+          text: `类型：${origin.genre}\n销量：${origin.sold}`,
+          fontSize: 12,
+          fill: '#fff',
+        }}
+      />
     );
   }}
 />
