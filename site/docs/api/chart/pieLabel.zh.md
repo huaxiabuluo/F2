@@ -76,7 +76,7 @@ const data = [
   { amount: 10, memo: 'Other', const: 'const' },
 ];
 
-<Canvas context={context} animate={false} pixelRatio={1}>
+<Canvas context={context}>
   <Chart
     data={data}
     coord={{

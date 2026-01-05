@@ -44,7 +44,7 @@ interface MagnifierProps {
   /** 放大镜半径，支持像素值（如 '50px'）或数字 */
   radius?: number | string;
   /** 放大镜中心位置 [x, y]，支持数字或带 px 的字符串 */
-  position?: [number, number];
+  position?: [number, number] | [string, string] ;
   /** 放大镜 X 轴偏移量 */
   offsetX?: number | string;
   /** 放大镜 Y 轴偏移量 */
@@ -59,7 +59,7 @@ interface MagnifierProps {
   };
   /** 辅助线配置 */
   referenceLines?: Array<{
-    /** 辅助线数据记录数组，需包含与图表 x/y 字段匹配的数据 */
+    /** 辅助线数据记录数组，需包含与图表 x/y 字段匹配的数据。x 字段支持特殊值 'min'（放大镜左侧）、'max'（放大镜右侧） */
     records: any[];
     /** line 组件样式（如 stroke、lineWidth、lineDash、lineCap、lineJoin、opacity 等） */
     style?: {
@@ -103,7 +103,7 @@ interface MagnifierProps {
 
 ```typescript
 interface ReferenceLine {
-  /** 辅助线数据记录数组，需包含与图表 x/y 字段匹配的数据 */
+  /** 辅助线数据记录数组，需包含与图表 x/y 字段匹配的数据。x 字段支持特殊值 'min'（放大镜左侧）、'max'（放大镜右侧） */
   records: any[];
   /** line 组件样式（如 stroke、lineWidth、lineDash、lineCap、lineJoin、opacity 等） */
   style?: {
@@ -111,6 +111,12 @@ interface ReferenceLine {
   };
 }
 ```
+
+**使用说明**：
+- `records` 数组中的每个对象必须包含与图表 x/y 字段对应的属性
+- x 字段支持特殊值：`'min'` 表示放大镜左侧起点，`'max'` 表示放大镜右侧终点
+- 常用于绘制水平阈值线、警戒线、平均值线等
+- 若要绘制水平线，保持 y 值固定，x 从 `'min'` 到 `'max'`
 
 ## 示例
 
@@ -187,10 +193,36 @@ interface ReferenceLine {
 
 ### 添加辅助线
 
-在放大镜中显示参考线（如平均值线）：
+在放大镜中显示阈值线或警戒线。`records` 中 x 字段支持特殊值 `'min'`（起点）和 `'max'`（终点）：
 
 ```jsx
-// 计算平均值
+<Canvas context={context}>
+  <Chart data={data}>
+    <Line x="date" y="value" />
+    <Magnifier
+      focusRange={[1, 6]}
+      referenceLines={[
+        {
+          // 绘制一条水平阈值线（y=100），从放大镜左侧延伸到右侧
+          records: [
+            { date: 'min', value: 100 },
+            { date: 'max', value: 100 },
+          ],
+          style: {
+            stroke: '#ff4d4f',
+            lineWidth: '2px',
+            lineDash: [4, 4],
+          },
+        },
+      ]}
+    />
+  </Chart>
+</Canvas>
+```
+
+添加多条参考线（如平均值线和警戒线）：
+
+```jsx
 const avgValue = data.reduce((sum, d) => sum + d.value, 0) / data.length;
 
 <Canvas context={context}>
@@ -200,11 +232,27 @@ const avgValue = data.reduce((sum, d) => sum + d.value, 0) / data.length;
       focusRange={[1, 6]}
       referenceLines={[
         {
-          records: data.map(d => ({ ...d, value: avgValue })),
+          // 平均值线
+          records: [
+            { date: 'min', value: avgValue },
+            { date: 'max', value: avgValue },
+          ],
           style: {
-            stroke: '#ff6b6b',
-            lineWidth: '3px',
-            lineDash: [5, 5],
+            stroke: '#1890ff',
+            lineWidth: '2px',
+            lineDash: [4, 4],
+          },
+        },
+        {
+          // 上限警戒线
+          records: [
+            { date: 'min', value: 120 },
+            { date: 'max', value: 120 },
+          ],
+          style: {
+            stroke: '#ff4d4f',
+            lineWidth: '2px',
+            lineDash: [2, 2],
           },
         },
       ]}
@@ -289,12 +337,16 @@ const data2 = [{ x: 1, y: 8 }, { x: 2, y: 18 }, { x: 3, y: 12 }];
 确保 `referenceLines` 中的 `records` 包含正确格式的数据，并且数据字段与图表的 x/y 字段匹配：
 
 ```jsx
+// 正确：使用特殊值 'min' 和 'max' 绘制水平阈值线
 <Magnifier
   focusRange={[1, 5]}
   referenceLines={[
     {
-      records: data.map(d => ({ ...d, value: maxValue })),
-      style: { stroke: '#ff6b6b' },
+      records: [
+        { date: 'min', value: 100 },  // 起点：放大镜左侧，y=100
+        { date: 'max', value: 100 },  // 终点：放大镜右侧，y=100
+      ],
+      style: { stroke: '#ff4d4f' },
     },
   ]}
 />
