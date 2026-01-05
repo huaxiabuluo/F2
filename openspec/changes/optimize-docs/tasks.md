@@ -44,7 +44,7 @@
 
 ### 3. 优先级 P1 - 辅助组件 API (8个)
 
-- [ ] 3.1 优化 `api/chart/scroll-bar.zh.md` - ScrollBar 滚动条组件
+- [x] 3.1 优化 `api/chart/scroll-bar.zh.md` - ScrollBar 滚动条组件 (commit `pending`)
 - [ ] 3.2 优化 `api/chart/magnifier.zh.md` - Magnifier 放大镜组件
 - [ ] 3.3 优化 `api/gauge.zh.md` - Gauge 仪表盘组件
 - [ ] 3.4 优化 `api/timeline.zh.md` - Timeline 时间轴组件
