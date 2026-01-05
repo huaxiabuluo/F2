@@ -1,0 +1,116 @@
+{
+  "description": "OpenSpec 通用任务步骤配置 - 基于模板的自动推断",
+  "version": "2.0",
+  "task_templates": {
+    "api_doc": {
+      "name_pattern": "优化 (.*\\.(zh|en)\\.md)",
+      "doc_path_pattern": "site/docs/(api|tutorial)/(.+)\\.(zh|en)\\.md",
+      "steps": [
+        {
+          "name": "读取文档",
+          "trigger": {
+            "tool": "Read",
+            "path_pattern": "site/docs/(api|tutorial)/.*\\.(zh|en)\\.md"
+          }
+        },
+        {
+          "name": "查找源码",
+          "trigger": {
+            "tool": "Glob|Grep|Read",
+            "path_pattern": "packages/f2/(src|test)"
+          }
+        },
+        {
+          "name": "优化文档",
+          "trigger": {
+            "tool": "Edit|Write",
+            "path_pattern": "site/docs/(api|tutorial)/.*\\.(zh|en)\\.md",
+            "exclude_read": true
+          },
+          "milestone": true
+        },
+        {
+          "name": "生成报告",
+          "trigger": {
+            "tool": "Write",
+            "path_pattern": "reports/.*-doc-improvement\\.md"
+          }
+        },
+        {
+          "name": "更新任务清单",
+          "trigger": {
+            "tool": "Edit",
+            "path_pattern": "openspec/changes/optimize-docs/tasks.md",
+            "content_has": "\\- \\[x\\]"
+          },
+          "milestone": true
+        },
+        {
+          "name": "提交变更",
+          "trigger": {
+            "tool": "Bash",
+            "command_pattern": "git commit"
+          },
+          "milestone": true
+        }
+      ]
+    }
+  },
+  "doc_type_detection": {
+    "patterns": {
+      "api_component": [
+        "api/chart/(geometry|area|interval|line|point|candlestick|pieLabel|legend|tooltip|axis|scroll-bar|magnifier)\\.(zh|en)\\.md",
+        "api/(canvas|component|gauge|timeline|treemap|sunburst|f2)\\.(zh|en)?\\.md"
+      ],
+      "api_guide": [
+        "api/chart/guide/(tag|text|point|line|rect|image|html|arc|region)guide\\.(zh|en)\\.md",
+        "api/chart/guide/guide\\.(zh|en)?\\.md"
+      ],
+      "tutorial_core": [
+        "tutorial/(getting-started|understanding|grammar|data)\\.(zh|en)\\.md"
+      ],
+      "tutorial_component": [
+        "tutorial/(component|coordinate|scale|shape|shape-attrs|graphic|animation)\\.(zh|en)?\\.md"
+      ],
+      "tutorial_framework": [
+        "tutorial/framework/(overview|react|vue|miniprogram|nodejs|svg-renderer|jsx-transform)\\.(zh|en)?\\.md"
+      ],
+      "tutorial_advanced": [
+        "tutorial/(advanced|question)/.*\\.md"
+      ]
+    }
+  },
+  "component_keywords": {
+    "canvas": ["canvas", "Canvas"],
+    "legend": ["legend", "Legend"],
+    "pielabel": ["pieLabel", "PieLabel", "pielabel"],
+    "tooltip": ["tooltip", "Tooltip"],
+    "axis": ["axis", "Axis"],
+    "geometry": ["geometry", "Geometry"],
+    "scrollbar": ["scroll-bar", "ScrollBar"],
+    "magnifier": ["magnifier", "Magnifier"],
+    "gauge": ["gauge", "Gauge"],
+    "timeline": ["timeline", "Timeline"],
+    "treemap": ["treemap", "Treemap"],
+    "sunburst": ["sunburst", "Sunburst"],
+    "component": ["component", "Component"],
+    "f2": ["f2\\.zh", "f2\\.en"],
+    "guide": ["guide\\.zh", "guide\\.en"],
+    "getting-started": ["getting-started"],
+    "understanding": ["understanding"],
+    "grammar": ["grammar"],
+    "data": ["data\\.(zh|en)"],
+    "coordinate": ["coordinate"],
+    "scale": ["scale"],
+    "shape": ["shape"],
+    "animation": ["animation"],
+    "graphic": ["graphic"],
+    "framework": ["framework/"],
+    "advanced": ["advanced/"],
+    "event": ["event"]
+  },
+  "required_steps": {
+    "default": ["读取文档", "查找源码", "优化文档", "生成报告", "更新任务清单", "提交变更"],
+    "minimal": ["读取文档", "优化文档", "更新任务清单", "提交变更"]
+  }
+}

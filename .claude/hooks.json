@@ -1,0 +1,29 @@
+{
+  "description": "OpenSpec 任务执行顺序强制验证",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Read|Write|Edit|Bash|Glob|Grep",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .claude/hooks/openspec-task-tracker.sh",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .claude/hooks/openspec-task-validator.sh",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}
