@@ -54,7 +54,7 @@
 
 ### 4. 优先级 P1 - 核心教程文档 (8个)
 
-- [ ] 4.1 优化 `tutorial/getting-started.zh.md` - 快速开始 (中文)
+- [x] 4.1 优化 `tutorial/getting-started.zh.md` - 快速开始 (中文) (commit `pending`)
 - [ ] 4.2 优化 `tutorial/getting-started.en.md` - 快速开始 (英文)
 - [ ] 4.3 优化 `tutorial/understanding.zh.md` - 核心概念 (中文)
 - [ ] 4.4 优化 `tutorial/understanding.en.md` - 核心概念 (英文)
