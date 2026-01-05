@@ -73,23 +73,23 @@
 - [x] 5.6 优化 `tutorial/shape.zh.md` - 图形 (中文) (commit `b63b6a70c`)
 - [x] 5.7 优化 `tutorial/shape-attrs.zh.md` - 图形属性 (中文) (commit `b879af7fc`)
 - [x] 5.8 优化 `tutorial/graphic.zh.md` - 图形语法 (中文) (commit `913e954e0`)
-- [x] 5.9 优化 `tutorial/animation.zh.md` - 动画 (中文) (commit `pending`)
+- [x] 5.9 优化 `tutorial/animation.zh.md` - 动画 (中文) (commit `a73795f70`)
 
 ### 6. 优先级 P2 - 框架集成教程 (8个)
 
-- [ ] 6.1 优化 `tutorial/framework/overview.zh.md` - 框架概览
-- [ ] 6.2 优化 `tutorial/framework/react.zh.md` - React 集成
-- [ ] 6.3 优化 `tutorial/framework/vue.zh.md` - Vue 集成
-- [ ] 6.4 优化 `tutorial/framework/miniprogram.zh.md` - 小程序集成 (中文)
-- [ ] 6.5 优化 `tutorial/framework/miniprogram.en.md` - 小程序集成 (英文)
-- [ ] 6.6 优化 `tutorial/framework/nodejs.zh.md` - Node.js 集成
-- [ ] 6.7 优化 `tutorial/framework/svg-renderer.zh.md` - SVG 渲染器
-- [ ] 6.8 优化 `tutorial/framework/jsx-transform.zh.md` - JSX 转换
+- [x] 6.1 优化 `tutorial/framework/overview.zh.md` - 框架概览 (commit `pending`)
+- [x] 6.2 优化 `tutorial/framework/react.zh.md` - React 集成 (commit `pending`)
+- [x] 6.3 优化 `tutorial/framework/vue.zh.md` - Vue 集成 (commit `pending`)
+- [x] 6.4 优化 `tutorial/framework/miniprogram.zh.md` - 小程序集成 (中文) (commit `pending`)
+- [x] 6.5 优化 `tutorial/framework/miniprogram.en.md` - 小程序集成 (英文) (commit `pending`)
+- [x] 6.6 优化 `tutorial/framework/nodejs.zh.md` - Node.js 集成 (commit `pending`)
+- [x] 6.7 优化 `tutorial/framework/svg-renderer.zh.md` - SVG 渲染器 (commit `pending`)
+- [x] 6.8 优化 `tutorial/framework/jsx-transform.zh.md` - JSX 转换 (commit `pending`)
 
 ### 7. 优先级 P2 - 高级主题 (2个)
 
-- [ ] 7.1 优化 `tutorial/advanced/custom-view.md` - 自定义视图
-- [ ] 7.2 优化 `tutorial/question/with-react-typescript.zh.md` - React TypeScript 集成
+- [x] 7.1 优化 `tutorial/advanced/custom-view.md` - 自定义视图 (commit `pending`)
+- [x] 7.2 优化 `tutorial/question/with-react-typescript.zh.md` - React TypeScript 集成 (commit `pending`)
 
 ## 8. 验证与报告生成
 
